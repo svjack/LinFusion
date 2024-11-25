@@ -55,7 +55,9 @@
 * Clone this repo to your project directory:
 
   ``` bash
-  git clone https://github.com/Huage001/LinFusion.git
+  sudo apt-get update && sudo apt-get install git-lfs ffmpeg cbm
+  pip install torch diffusers transformers 
+  git clone https://github.com/svjack/LinFusion.git
   ```
 
 * **You only need two lines!**
