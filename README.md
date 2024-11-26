@@ -28,6 +28,23 @@
 <p><strong>Cmd:</strong>python Linfusion_upscale_video.py lingren_smile.mp4 "solo,KAMISATO AYATO(genshin impact),1boy,highres," --upscale_factor 2</p>
 
 
+# Use LinFusion to upscale Genshin Impact video (made by https://huggingface.co/svjack/diffusers-sdxl-controlnet) 
+
+## XiangLing Animation
+<div style="margin-bottom: 10px;">
+  <video controls autoplay src="https://github.com/user-attachments/assets/330ce4d3-1fde-4437-97e5-7b1a4837e407" style="width: 1024px; height: 800px;"></video>
+</div>
+<div style="margin-bottom: 10px;">
+  <video controls autoplay src="https://github.com/user-attachments/assets/fb1c444c-c1ca-4ee7-b2f2-2a718cd94653" style="width: 1024px; height: 800px;"></video>
+</div>
+<p><strong>Cmd:</strong> python Linfusion_upscale_video.py xiangling_animation.mp4 "solo,Xiangling\(genshin impact\),1girl,full body professional photograph of a stunning detailed" --upscale_factor 2 --upscale_strength 5.0 </p>
+
+
+
+
+
+
+
 
 
 
