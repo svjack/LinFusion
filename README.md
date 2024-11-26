@@ -23,9 +23,13 @@
   <video controls autoplay src="https://github.com/user-attachments/assets/f2d899c1-d0d0-41bc-887e-b061ff8ea027" style="width: 1024px; height: 800px;"></video>
 </div>
 <div style="margin-bottom: 10px;">
-  <video controls autoplay src="https://github.com/user-attachments/assets/e74148c9-300a-44cc-9334-49ced6ad9ec4" style="width: 1024px; height: 800px;"></video>
+  <video controls autoplay src="https://github.com/user-attachments/assets/de33aa60-71d7-407d-90f6-20ee619ae9da" style="width: 1024px; height: 800px;"></video>
 </div>
 <p><strong>Cmd:</strong>python Linfusion_upscale_video.py lingren_smile.mp4 "solo,KAMISATO AYATO(genshin impact),1boy,highres," --upscale_factor 2</p>
+
+
+
+
 
 
 
