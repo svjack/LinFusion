@@ -7,6 +7,41 @@
 </div>
 
 
+# Use LinFusion to upscale Genshin Impact video (made by https://github.com/svjack/MasaCtrl) 
+
+## Zhongli Drink tea
+<div style="margin-bottom: 10px;">
+  <video controls autoplay src="https://github.com/user-attachments/assets/a630af42-b31e-4b92-bbb8-b27818824cac" style="width: 1024px; height: 800px;"></video>
+</div>
+<div style="margin-bottom: 10px;">
+  <video controls autoplay src="https://github.com/user-attachments/assets/87ad7dd6-d2e8-4ae0-97fe-13dde71288b0" style="width: 1024px; height: 800px;"></video>
+</div>
+<p><strong>Cmd:</strong> python Linfusion_upscale_video.py zhongli_drink_tea.mp4 "solo,ZHONGLI(genshin impact),1boy,portrait,upper_body,highres," --upscale_factor 2 </p>
+
+## Lingren smile
+<div style="margin-bottom: 10px;">
+  <video controls autoplay src="https://github.com/user-attachments/assets/f2d899c1-d0d0-41bc-887e-b061ff8ea027" style="width: 1024px; height: 800px;"></video>
+</div>
+<div style="margin-bottom: 10px;">
+  <video controls autoplay src="https://github.com/user-attachments/assets/e74148c9-300a-44cc-9334-49ced6ad9ec4" style="width: 1024px; height: 800px;"></video>
+</div>
+<p><strong>Cmd:</strong>python Linfusion_upscale_video.py lingren_smile.mp4 "solo,KAMISATO AYATO(genshin impact),1boy,highres," --upscale_factor 2</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 > **LinFusion: 1 GPU, 1 Minute, 16K Image**
 > <br>
 > [Songhua Liu](http://121.37.94.87/), 
