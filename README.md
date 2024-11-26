@@ -58,6 +58,7 @@
   sudo apt-get update && sudo apt-get install git-lfs ffmpeg cbm
   pip install torch diffusers transformers 
   git clone https://github.com/svjack/LinFusion.git && cd LinFusion
+  pip install moviepy
   ```
 
 * **You only need two lines!**
