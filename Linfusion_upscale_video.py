@@ -32,24 +32,25 @@ def initialize_pipe(device):
 
     return pipe
 
-def upscale_image(pipe, image, prompt, width, height, device):
+def upscale_image(pipe, image, prompt, width, height, device, num_inference_steps, guidance_scale, cosine_scale_1, cosine_scale_2, cosine_scale_3, gaussian_sigma, upscale_strength):
     generator = torch.manual_seed(0)
     upscaled_image = pipe(
         image=image, prompt=prompt,
         height=height, width=width, device=device, 
-        num_inference_steps=50, guidance_scale=7.5,
-        cosine_scale_1=3, cosine_scale_2=1, cosine_scale_3=1, gaussian_sigma=0.8,
-        generator=generator, upscale_strength=0.32
+        num_inference_steps=num_inference_steps, guidance_scale=guidance_scale,
+        cosine_scale_1=cosine_scale_1, cosine_scale_2=cosine_scale_2, cosine_scale_3=cosine_scale_3, gaussian_sigma=gaussian_sigma,
+        generator=generator, upscale_strength=upscale_strength
     ).images[0]
 
     return upscaled_image
 
-def main(mp4_path, prompt, width, height, upscale_factor, output_filename):
+def main(mp4_path, prompt, width, height, upscale_factor, output_filename, num_inference_steps, guidance_scale, cosine_scale_1, cosine_scale_2, cosine_scale_3, gaussian_sigma, upscale_strength):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
     if upscale_factor:
-        width *= upscale_factor
-        height *= upscale_factor
+        video_clip = VideoFileClip(mp4_path)
+        width = int(video_clip.w * upscale_factor)
+        height = int(video_clip.h * upscale_factor)
 
     # Initialize the pipeline
     pipe = initialize_pipe(device)
@@ -62,7 +63,7 @@ def main(mp4_path, prompt, width, height, upscale_factor, output_filename):
     upscaled_frames = []
     for frame in tqdm(frames, desc="Upscaling frames"):
         image = Image.fromarray(frame)
-        upscaled_image = upscale_image(pipe, image, prompt, width, height, device)
+        upscaled_image = upscale_image(pipe, image, prompt, width, height, device, num_inference_steps, guidance_scale, cosine_scale_1, cosine_scale_2, cosine_scale_3, gaussian_sigma, upscale_strength)
         upscaled_frames.append(upscaled_image)
 
     # Save the upscaled frames to a temporary directory
@@ -97,6 +98,13 @@ if __name__ == "__main__":
     parser.add_argument("--height", type=int, default=512, help="Height of the upscaled image.")
     parser.add_argument("--upscale_factor", type=int, default=None, help="Upscale factor to automatically calculate width and height.")
     parser.add_argument("--output_filename", type=str, default=None, help="Output filename for the upscaled video.")
+    parser.add_argument("--num_inference_steps", type=int, default=50, help="Number of inference steps.")
+    parser.add_argument("--guidance_scale", type=float, default=7.5, help="Guidance scale.")
+    parser.add_argument("--cosine_scale_1", type=float, default=3, help="Cosine scale 1.")
+    parser.add_argument("--cosine_scale_2", type=float, default=1, help="Cosine scale 2.")
+    parser.add_argument("--cosine_scale_3", type=float, default=1, help="Cosine scale 3.")
+    parser.add_argument("--gaussian_sigma", type=float, default=0.8, help="Gaussian sigma.")
+    parser.add_argument("--upscale_strength", type=float, default=0.32, help="Upscale strength.")
 
     args = parser.parse_args()
-    main(args.mp4_path, args.prompt, args.width, args.height, args.upscale_factor, args.output_filename)
+    main(args.mp4_path, args.prompt, args.width, args.height, args.upscale_factor, args.output_filename, args.num_inference_steps, args.guidance_scale, args.cosine_scale_1, args.cosine_scale_2, args.cosine_scale_3, args.gaussian_sigma, args.upscale_strength)
