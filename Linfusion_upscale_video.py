@@ -1,14 +1,5 @@
 #!/usr/bin/env python
 # coding: utf-8
-
-import argparse
-from moviepy import VideoFileClip, ImageSequenceClip
-from src.pipelines.pipeline_superres_sdxl import StableDiffusionXLSuperResPipeline
-from diffusers import AutoPipelineForText2Image
-import torch
-import os#!/usr/bin/env python
-# coding: utf-8
-
 import argparse
 from moviepy.editor import VideoFileClip, ImageSequenceClip
 from src.pipelines.pipeline_superres_sdxl import StableDiffusionXLSuperResPipeline
