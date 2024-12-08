@@ -43,10 +43,10 @@
   <video controls autoplay src="https://github.com/user-attachments/assets/3ccfbc23-642d-4586-a3b9-3021d666a7a0" style="width: 1024px; height: 800px;"></video>
 </div>
 <div style="margin-bottom: 10px;">
-  <video controls autoplay src="https://github.com/user-attachments/assets/eec1dea7-61e9-4853-973d-f731245d2bd3" style="width: 1024px; height: 800px;"></video>
+  <video controls autoplay src="https://github.com/user-attachments/assets/9a3cfdbc-8ed0-4d33-942b-f1370c6917ed" style="width: 1024px; height: 800px;"></video>
 </div>
 <div style="margin-bottom: 10px;">
-  <video controls autoplay src="https://github.com/user-attachments/assets/9a3cfdbc-8ed0-4d33-942b-f1370c6917ed" style="width: 1024px; height: 800px;"></video>
+  <video controls autoplay src="https://github.com/user-attachments/assets/eec1dea7-61e9-4853-973d-f731245d2bd3" style="width: 1024px; height: 800px;"></video>
 </div>
 <p><strong>Cmd:</strong> python Linfusion_upscale_video.py xiangling_tea_animation.mp4 \
  "solo,Xiangling\(genshin impact\),1girl,full body professional photograph of a stunning detailed, drink tea use chinese cup" \
