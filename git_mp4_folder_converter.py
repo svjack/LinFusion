@@ -1,3 +1,8 @@
+'''
+python git_mp4_folder_converter.py input_folder output_folder --mode gif2mp4
+
+python git_mp4_folder_converter.py input_folder output_folder --mode mp42gif
+'''
 #!/usr/bin/env python
 # coding: utf-8
 
