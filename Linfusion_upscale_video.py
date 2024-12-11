@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 # coding: utf-8
-#!/usr/bin/env python
-# coding: utf-8
 import argparse
 from moviepy.editor import VideoFileClip, ImageSequenceClip
 from src.pipelines.pipeline_superres_sdxl import StableDiffusionXLSuperResPipeline
