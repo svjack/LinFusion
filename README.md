@@ -51,6 +51,11 @@
 <p><strong>Cmd:</strong> python Linfusion_upscale_video.py xiangling_tea_animation.mp4 \
  "solo,Xiangling\(genshin impact\),1girl,full body professional photograph of a stunning detailed, drink tea use chinese cup" \
   --upscale_factor 2 </p>
+- Or In Folder
+```bash
+ python Linfusion_upscale_video_folder.py xiangling_processed xiangling_upscaled \
+  "solo,Xiangling,_genshin_impact_,1girl,highres" --upscale_factor 2 --upscale_strength 0.5
+```
 
 
 
